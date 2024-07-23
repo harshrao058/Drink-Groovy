@@ -6,7 +6,7 @@ import SliderThree from "../Components/SliderThree";
 import SliderFour from "../Components/SliderFour";
 import SliderFive from "../Components/SliderFive";
 
-const sliders = [ <SliderFive />];
+const sliders = [<Slider />, <SliderTwo />, <SliderThree />, <SliderFour />, <SliderFive />];
 // const sliders = [<Slider />];
 
 const PageTwo = () => {
