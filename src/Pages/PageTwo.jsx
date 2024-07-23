@@ -6,6 +6,7 @@ import SliderThree from "../Components/SliderThree";
 import SliderFour from "../Components/SliderFour";
 import SliderFive from "../Components/SliderFive";
 
+// const sliders = [<Slider />, <SliderTwo />, <SliderThree />, <SliderFour />, <SliderFive />];
 const sliders = [<Slider />, <SliderTwo />, <SliderThree />, <SliderFour />, <SliderFive />];
 // const sliders = [<Slider />];
 
@@ -31,7 +32,7 @@ const PageTwo = () => {
   };
 
   return (
-    <div className="relative w-full overflow-hidden z-1">
+    <div className="relative w-full h-[85v] overflow-hidden z-1">
       <div
         className="flex transition-transform duration-500"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}

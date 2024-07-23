@@ -41,26 +41,26 @@ const SliderFive = () => {
   }, []);
 
   return (
-    <div className="h-screen w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-16 bg-[#F8D148]">
-      <div className="text-center md:text-left mb-8 md:mb-0">
-        <div ref={textRef} className="font-oswald font-semibold uppercase text-4xl md:text-7xl text-white">
+    <div className="h-screen w-full flex items-center justify-between px-16 bg-[#F8D148]">
+      <div>
+        <div ref={textRef} className="font-oswald font-semibold uppercase text-7xl text-white">
           <h1>
-            Made With Sweet
-            <br /> & puply <br /> <span className="text-[#F2B131]">
-              Lychees
-            </span>
+            Made With 
+            <br /> Topical <br /> <span className="text-[#F2B131]">
+              Manogo
+            </span>{" "}
           </h1>
         </div>
-        <div ref={subTextRef} className="font-oswald font-semibold uppercase text-xl md:text-4xl text-gray-700 mt-4 md:mt-0">
-          Groovy Fruit Drink - Lychees
+        <div ref={subTextRef} className="font-oswald font-semibold uppercase text-4xl text-gray-700">
+          Groovy Fruit Drink - Mango
         </div>
-        <div ref={buttonRef} className="flex justify-center md:justify-start uppercase mt-8">
-          <h1 className="bg-gray-700 text-white px-4 text-lg md:text-xl py-3 w-auto flex items-center gap-2">
+        <div ref={buttonRef} className="flex items-center uppercase mt-8">
+          <h1 className="bg-gray-700 text-white px-4 text-xl py-3 w-auto flex items-center gap-2">
             Shop Now <LuShoppingBag />
           </h1>
         </div>
       </div>
-      <img ref={imageRef} src={slide5} alt="" className="h-64 md:h-full" />
+      <img ref={imageRef} src={slide5} alt="" className="h-full" />
     </div>
   );
 };

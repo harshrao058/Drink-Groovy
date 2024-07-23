@@ -21,7 +21,7 @@ const Slider = () => {
             Groovy Fruit Drink - Lemon
           </div>
           <div className="w flex items-center uppercase mt-8">
-            <h1 className="bg-gray-700 text-white px-4 text-xl py-3 w-auto flex items-center gap-2">
+            <h1 className="bg-gray-700 text-white hover:bg-white hover:text-gray-700 transition-all ease-in-out px-4 text-xl py-3 w-auto flex items-center gap-2">
               Shop Now <LuShoppingBag />
 
             </h1>

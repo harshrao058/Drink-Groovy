@@ -2,6 +2,7 @@ import NumberTicker from "./magicui/number-ticker";
 import React from "react";
 import { PiCity } from "react-icons/pi";
 import { RiEmotionHappyLine } from "react-icons/ri";
+import { FaUsers } from "react-icons/fa6";
 
 const Working = () => {
   return (
@@ -23,7 +24,11 @@ const Working = () => {
           <NumberTicker value={1005626} />
         </div>
         <div className="flex flex-col items-center justify-center gap-4 w-1/3">
-          <h1>Partners</h1>
+          <div className="flex items-center gap-2">
+            <h1>Partners</h1>
+            <FaUsers />
+          </div>
+
           <NumberTicker value={60} color="white" />
         </div>
       </div>

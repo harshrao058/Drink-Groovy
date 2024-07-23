@@ -11,7 +11,7 @@ const items = ["home", "Product", "About Us", "Blog", "contact us"];
 const Nav = () => {
   return (
     <>
-      <div className="w-full z-50 fixed flex items-center justify-between lg:px-16 px-8 lg:py-8 py-4   text-white ">
+      <div className="w-full z-50 fixed flex items-center justify-between lg:px-16 px-8 lg:py-8 py-4 h-[15vh] bg-black   text-white ">
         <div className=" flex items-center gap-16">
           <img src={logo} alt="Logo" className="w-[8vw]" />{" "}
           <div className="flex gap-[4vw] uppercase ">

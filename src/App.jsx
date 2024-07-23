@@ -8,16 +8,18 @@ import Marquee from "./Components/Marquee";
 import Working from "./Components/Working";
 import LeftToRightMarquee from "./Components/LeftToRightMarquee.jsx";
 import Products from "./Components/Products.jsx";
+import StickyBackground from "./Components/StickyBackground.jsx";
 
 function App() {
   return (
-    <div className="App ">
+    <div className="App overflow-hidden ">
       <Nav />
       <Carousel className="" />
       <PageTwo />
       {/* <PageOne /> */}
       <Working />
-      <Products />
+      <StickyBackground />
+      {/* <Products /> */}
       <LeftToRightMarquee />
       <Marquee />
     </div>
