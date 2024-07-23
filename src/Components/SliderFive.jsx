@@ -1,20 +1,66 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import slide5 from '../../public/slide5.jpg';
+import { LuShoppingBag } from "react-icons/lu";
+import gsap from 'gsap';
 
 const SliderFive = () => {
+  const textRef = useRef();
+  const subTextRef = useRef();
+  const buttonRef = useRef();
+  const imageRef = useRef();
+
+  useEffect(() => {
+    gsap.from(textRef.current, { 
+      duration: 1, 
+      y: -50, 
+      opacity: 0, 
+      ease: 'power3.out', 
+      delay: 0.5 
+    });
+    gsap.from(subTextRef.current, { 
+      duration: 1, 
+      y: 50, 
+      opacity: 0, 
+      ease: 'power3.out', 
+      delay: 1 
+    });
+    gsap.from(buttonRef.current, { 
+      duration: 1, 
+      scale: 0.5, 
+      opacity: 0, 
+      ease: 'back.out(1.7)', 
+      delay: 1.5 
+    });
+    gsap.from(imageRef.current, { 
+      duration: 1.5, 
+      x: 100, 
+      opacity: 0, 
+      ease: 'power3.out', 
+      delay: 0.5 
+    });
+  }, []);
+
   return (
-    <div className="h-screen w-full flex items-center justify-end bg-gradient-to-b from-[#F8D148] to-[#FDCACF] relative">
-      <div className="relative h-full w-auto">
-        <img src={slide5} alt="" className="h-full rounded-xl relative z-10" />
-        <div className="absolute inset-0 rounded-xl pointer-events-none bg-transparent" style={{
-          background: `
-            radial-gradient(circle at top left, transparent 25%, #DC5E6A 26%),
-            radial-gradient(circle at top right, transparent 25%, #DC5E6A 26%),
-            radial-gradient(circle at bottom left, transparent 25%, #DC5E6A 26%),
-            radial-gradient(circle at bottom right, transparent 25%, #DC5E6A 26%)
-          `
-        }}></div>
+    <div className="h-screen w-full flex items-center justify-between px-16 bg-[#F8D148]">
+      <div>
+        <div ref={textRef} className="font-oswald font-semibold uppercase text-7xl text-white">
+          <h1>
+            Made With Sweet
+            <br /> & puply <br /> <span className="text-[#F2B131]">
+              Lychees
+            </span>{" "}
+          </h1>
+        </div>
+        <div ref={subTextRef} className="font-oswald font-semibold uppercase text-4xl text-gray-700">
+          Groovy Fruit Drink - Lychees
+        </div>
+        <div ref={buttonRef} className="flex items-center uppercase mt-8">
+          <h1 className="bg-gray-700 text-white px-4 text-xl py-3 w-auto flex items-center gap-2">
+            Shop Now <LuShoppingBag />
+          </h1>
+        </div>
       </div>
+      <img ref={imageRef} src={slide5} alt="" className="h-full" />
     </div>
   );
 };

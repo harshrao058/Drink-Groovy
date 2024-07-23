@@ -62,16 +62,7 @@ const Carousel = () => {
           <MdOutlineKeyboardArrowRight size={60} />
         </button>
       </div>
-     <div className="z-2 absolute bottom-28 right-0"> 
-     <h1 className="   text-black uppercase bg-blend-screen bg-white px-4 py-4 font-semibold flex items-center gap-2">
-        Explore Products <AiOutlineProduct size={20} />
-
-      </h1>
-      <h1 className="  text-black uppercase bg-blend-screen bg-white px-4 py-4 font-semibold flex items-center gap-2">
-        Know About Us <FcAbout size={20} />
-
-      </h1>
-     </div>
+     
       
     </div>
   );

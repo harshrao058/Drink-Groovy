@@ -72,8 +72,8 @@ const ReviewCard = ({ img, name, username, body }) => {
 export default function MarqueeDemo() {
   return (
     <div>
-      <div className="relative py-8 flex  w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-[]  md:shadow-xl">
-        <h1 className="text-3xl font-semibold font tracking-tight py-4">Customers Reviews</h1>
+      <div className="relative py- flex  w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-[]  md:shadow-xl">
+        <h1 className="text-4xl font-semibold font tracking-tight py-8">Our <span className="text-green-600 border-b-2 border-green-600 ">Customers :)</span> Reviews</h1>
 
         <Marquee pauseOnHover className="[--duration:20s]">
           {firstRow.map((review) => (

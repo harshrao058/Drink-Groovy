@@ -1,20 +1,25 @@
-import React from 'react';
-import slide2 from '../../public/slide2.jpg';
+import React from "react";
+import slide2 from "../../public/slide2.jpg";
+import { LuShoppingBag } from "react-icons/lu";
 
 const SliderTwo = () => {
   return (
-    <div className="h-screen w-full flex items-center justify-center bg-gradient-to-b from-[#DC5E6A] to-[#FDCACF] relative">
-      <div className="relative h-full w-auto">
-        <img src={slide2} alt="" className="h-full rounded-xl relative z-10" />
-        <div className="absolute inset-0 rounded-xl pointer-events-none bg-transparent" style={{
-          background: `
-            radial-gradient(circle at top left, transparent 25%, #DC5E6A 26%),
-            radial-gradient(circle at top right, transparent 25%, #DC5E6A 26%),
-            radial-gradient(circle at bottom left, transparent 25%, #DC5E6A 26%),
-            radial-gradient(circle at bottom right, transparent 25%, #DC5E6A 26%)
-          `
-        }}></div>
+    <div className="h-screen w-full flex items-center justify-between px-16 bg-gradient-to-b to-[#FEB8C0] from-[#DC5E6A]">
+      <div>
+        <div className="font-oswald font-<weight>  font-semibold uppercase text-7xl text-white  ">
+          <h1 className="">Made With Ruby <br /> Like <br /> <span className="text-pink-700">Pomegranates</span> </h1>
+        </div>
+        <div className="font-oswald font-<weight>  font-semibold uppercase text-4xl text-gray-700  ">
+          Groovy Fruit Drink - Anar
+        </div>
+        <div className="w flex items-center uppercase mt-8">
+            <h1 className="bg-gray-700 text-white px-4 text-xl py-3 w-auto flex items-center gap-2">
+              Shop Now <LuShoppingBag />
+
+            </h1>
+          </div>
       </div>
+      <img src={slide2} alt="" className="h-full" />
     </div>
   );
 };
