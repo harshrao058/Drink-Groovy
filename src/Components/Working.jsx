@@ -6,7 +6,7 @@ import { RiEmotionHappyLine } from "react-icons/ri";
 const Working = () => {
   return (
     <>
-      <div className="whitespace-pre-wrap w-full  text-4xl font-semibold tracking-tighter text-white bg-[#687F44] flex itmes-center justify-between p-16">
+      <div className="whitespace-pre-wrap w-full  text-4xl font-semibold tracking-tighter text-white bg-[#FF6F00] flex itmes-center justify-between p-8">
         <div className="flex flex-col items-center justify-center gap-4 w-1/3">
           <div className="flex items-center gap-2">
             <h1>Cites</h1>

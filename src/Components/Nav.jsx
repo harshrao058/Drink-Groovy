@@ -13,11 +13,10 @@ const Nav = () => {
     <>
       <div className="w-full z-50 fixed   text-white flex justify-between px-20 h-28 items-center   ">
         <div className="w-1/4">
-          <FiSearch className="text-4xl font-bold" />
+          <img src={logo} alt="Logo" className="w-28" />{" "}
         </div>
         <div className="flex flex-col w-1/2 justify-center gap-2 items-center text-lg">
           {" "}
-          <img src={logo} alt="Logo" className="w-28" />{" "}
           <div className="flex gap-16 uppercase ">
             {items.map((val, key) => (
               <div key={key} className="cursor-pointer font-semibold s">
@@ -27,9 +26,11 @@ const Nav = () => {
           </div>
         </div>
         <div className="text-4xl w-1/4 flex items-center justify-end gap-8">
-          <LuShoppingCart />
-          <GrFavorite />
-          <FaRegUser className="text-3xl" />
+          <FiSearch className="text-3xl font-bold" />
+
+          <LuShoppingCart className="text-3xl"/>
+          <GrFavorite className="text-3xl" />
+          <FaRegUser className="text-2xl" />
         </div>
       </div>
     </>
