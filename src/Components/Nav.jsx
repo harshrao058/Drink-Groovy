@@ -1,19 +1,21 @@
 import React from "react";
 import { FiSearch } from "react-icons/fi";
 import { LuShoppingCart } from "react-icons/lu";
+import { GrFavorite } from "react-icons/gr";
+import { FaRegUser } from "react-icons/fa6";
 
 import logo from "../../public/logo.png";
 
-const items = ["teas", "martinis", "sodas", "ice cream", "yogurt"];
+const items = ["home", "About", "shop", "media", "contact"];
 
 const Nav = () => {
   return (
     <>
-      <div className="w-full z-50 fixed  text-white flex justify-between px-20 h-28 items-center ">
-        <div>
+      <div className="w-full z-50 fixed   text-white flex justify-between px-20 h-28 items-center   ">
+        <div className="w-1/4">
           <FiSearch className="text-4xl font-bold" />
         </div>
-        <div className="flex flex-col justify-center gap-2 items-center text-lg">
+        <div className="flex flex-col w-1/2 justify-center gap-2 items-center text-lg">
           {" "}
           <img src={logo} alt="Logo" className="w-28" />{" "}
           <div className="flex gap-16 uppercase ">
@@ -24,8 +26,10 @@ const Nav = () => {
             ))}
           </div>
         </div>
-        <div>
-          <LuShoppingCart className="text-4xl" />
+        <div className="text-4xl w-1/4 flex items-center justify-end gap-8">
+          <LuShoppingCart />
+          <GrFavorite />
+          <FaRegUser className="text-3xl" />
         </div>
       </div>
     </>
