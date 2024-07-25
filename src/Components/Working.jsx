@@ -7,7 +7,7 @@ import { FaUsers } from "react-icons/fa6";
 const Working = () => {
   return (
     <>
-      <div className="whitespace-pre-wrap w-full  text-3xl font-semibold tracking-tighter text-white bg-green-800 flex itmes-center justify-between px-8 py-4">
+      <div className="whitespace-pre-wrap w-full  text-3xl font-semibold tracking-tighter text-white bg-green-800 flex itmes-center justify-between px-4 py-2">
         <div className="flex flex-col items-center justify-center gap-4 w-1/3">
           <div className="flex items-center gap-2">
             <h1>Cites</h1>

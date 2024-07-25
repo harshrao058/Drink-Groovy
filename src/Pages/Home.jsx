@@ -12,12 +12,12 @@ const Home = () => {
     <>
       <div className="overflow-hidden">
         <PageTwo />
+        <Working />
+        <StickyBackground />
 
-        {/* <Working /> */}
         <Features />
         {/* <Qualities /> */}
         {/* <Products /> */}
-        <StickyBackground />
         <LeftToRightMarquee />
 
 

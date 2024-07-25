@@ -9,13 +9,13 @@ import logo from "../../public/logo.png";
 
 const Nav = () => {
   return (
-    <div className="w-full z-50 fixed flex items-center justify-between lg:px-16 px-8 lg:py-8 py-4 h-24  text-white">
+    <div className="w-full z-50 fixed flex items-center justify-between lg:px-16 px-8 lg:py-8 py-4 h-24  text-black">
       <div className="flex items-center gap-16">
         <img src={logo} alt="Logo" className="w-[8vw]" />
         <div className="flex gap-[4vw] uppercase">
           <NavLink
             to="/"
-            className="cursor-pointer font-semibold text-sm hover:text-gray-400"
+            className="cursor-pointer font-semibold text-sm text-white bg-zinc-800 px-2 py-1 hover:text-gray-400"
           >
             Home
           </NavLink>

@@ -1,9 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+DK+Uloopet:wght@100..400&display=swap");
+* {
+  font-family: "Poppins";
+}
 
-*{
-  font-family: 'Poppins';
+.fontstyle {
+  font-family: "Playwrite DK Uloopet";
+  font-optical-sizing: auto;
+  font-weight: 2;
+  font-style: normal;
 }
 
 @layer base {
