@@ -3,6 +3,7 @@ import PageTwo from "../Components/PageTwo";
 import Marquee from "../Components/Marquee";
 import Working from "../Components/Working";
 import Qualities from "../Components/Qualities";
+import Features from "../Components/Features.jsx";
 import StickyBackground from "../Components/StickyBackground";
 import LeftToRightMarquee from "../Components/LeftToRightMarquee";
 import Products from "../Components/Products";
@@ -12,9 +13,10 @@ const Home = () => {
       <div className="overflow-hidden">
         <PageTwo />
 
-        <Working />
-        <Qualities />
-        <Products />
+        {/* <Working /> */}
+        <Features />
+        {/* <Qualities /> */}
+        {/* <Products /> */}
         <StickyBackground />
         <LeftToRightMarquee />
 
