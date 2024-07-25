@@ -4,17 +4,41 @@ import { FaTrophy, FaClock, FaRecycle } from "react-icons/fa";
 import { IoIosTimer } from "react-icons/io";
 import { GiFruitTree } from "react-icons/gi";
 import { IoBan } from "react-icons/io5";
+import allpro from "../../public/allpro.png";
+
+const colors = [
+  "#85c240", // light green
+  "#ffb742", // orange
+  "#d9435a", // red
+  "#cfe035", // lime green
+  "#f5939a", // pink
+  "#ff8c36", // dark orange
+];
+const text = "COMPLETES YOUR DRINKS, ANY TIME! ANY WHERE!";
+const words = text.split("");
 
 export default function Features() {
   return (
     <div className="mx-auto max--7xl px-16 py-8 sm:px-6 lg:px-8">
       <div className="mx-auto ext-center w-full">
-        <h2 className="mt-6 text-3xl items-center justify-center font-bold leading-tight w-full text-black sm:text-4xl lg:text-5xl flex ">
-          <p>COMPLETES YOUR DRINKS, ANY TIME! ANY WHERE! </p>
+        <h2 className="mt-6 text-3xl items-center justify-center font-bold leading-tight w-full text-black sm:text-4xl lg:text-4xl flex flex-col">
+          <p>
+            {words.map((word, index) => (
+              <span
+                key={index}
+                style={{ color: colors[index % colors.length] }}
+              >
+                {word}{""}
+              </span>
+            ))}{" "}
+          </p>
           <p className="flex"> </p>
+          <div className="w-full py-8 ">
+            <img src={allpro} alt="" className=" mx-auto  " />
+          </div>
         </h2>
         {/* <IoIosTimer className="text-4xl"/> */}
-        <p className="mt-4  px-64 text-center text-base leading-relaxed text-gray-600">
+        <p className="px-64 text-center text-base leading-relaxed text-gray-600">
           Every sip of our juices takes you down memory lane. You don’t just
           enjoy the diversity of flavours but dive into a pool of quality fruit
           extracts. Groovy is not just a drink, it's a story spun together in
@@ -29,7 +53,7 @@ export default function Features() {
       <div className="my-12 grid grid-cols-1 gap-y-8 text-center sm:grid-cols-2 sm:gap-12 lg:grid-cols-3 px-8">
         <div className="border-zinc-200 border-2 py-4 px-4 rounded-xl">
           <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gray-100">
-            <GiFruitTree  className="h-9 w-9 text-green-500 " />
+            <GiFruitTree className="h-9 w-9 text-green-500 " />
           </div>
           <h3 className="mt-8 text-lg font-semibold text-black">
             NATURAL TASTE
@@ -63,11 +87,7 @@ export default function Features() {
             hub. No more fridge full of unloved fruit and veg.
           </p>
         </div>
-       
       </div>
-       <div className="w-full ">
-          <img src="../../public/allpro.png" alt="" className=" mx-auto  " />
-        </div>
     </div>
   );
 }
