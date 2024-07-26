@@ -4,11 +4,12 @@ import { FaInstagram, FaLinkedin, FaFacebook, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-zinc-800 py-8 text-white  bg-fixed bg-cover bg-center"
-    // style={{
-    //   backgroundImage:
-    //     "url('https://embedsocial.com/admin/mediacdn/feed-media/18006/18006077030309004/image_0_large.webp')",
-    // }}
+    <footer
+      className="relative bg-zinc-800 py-8 text-white  bg-fixed bg-cover bg-center"
+      // style={{
+      //   backgroundImage:
+      //     "url('https://embedsocial.com/admin/mediacdn/feed-media/18006/18006077030309004/image_0_large.webp')",
+      // }}
     >
       <div className="container mx-auto w-full flex flex-col  md:flex-row justify-center items-center">
         <div className="flelex-col w-1/3 items-center justify-center mb-6 md:mb-0">
@@ -18,18 +19,16 @@ const Footer = () => {
             className="h-16 mb-4"
           />
           <p className="text-sm">
-            <a
-              href=""
-              className="text-blue-600"
-            >
-              harshrao@gmail.com
+            <a href="" className="text-blue-600">
+              contact.info@drinkgroovy.com
             </a>
             <br />
-            Lorem ipsum dolor sit amet consectetur adipisicing
+            Enhaz Beverages Pvt. Ltd.
             <br />
-            dolor sit amet con
+            D-09, Second Floor, Panchsheel Enclave, Above HDFC Bank Ltd, Soami
+            Nagar Branch,
             <br />
-            Uneigd Kdom
+            New Delhi - 110017
           </p>
         </div>
         <div className="flelex-col w-1/3 items-center mb-6 md:mb-0">
