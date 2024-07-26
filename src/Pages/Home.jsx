@@ -1,4 +1,6 @@
 import React from "react";
+
+import Carousel from "../Components/Carousel";
 import PageTwo from "../Components/PageTwo";
 import Marquee from "../Components/Marquee";
 import Working from "../Components/Working";
@@ -12,6 +14,8 @@ const Home = () => {
     <>
       <div className="overflow-hidden">
         <PageTwo />
+        <Carousel />
+
         <Working />
         <StickyBackground />
 
