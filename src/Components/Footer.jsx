@@ -19,10 +19,7 @@ const Footer = () => {
             className="h-16 mb-4"
           />
           <p className="text-sm">
-            <a href="" className="text-blue-600">
-              contact.info@drinkgroovy.com
-            </a>
-            <br />
+           
             Enhaz Beverages Pvt. Ltd.
             <br />
             D-09, Second Floor, Panchsheel Enclave, Above HDFC Bank Ltd, Soami

@@ -44,10 +44,10 @@ const Nav = () => {
             Products
           </NavLink>
           <NavLink
-            to="/"
+            to="/gallery"
             className="cursor-pointer font-semibold text-sm hover:text-gray-400"
           >
-            Blogs
+            Gallery
           </NavLink>
           <NavLink
             to="/about"

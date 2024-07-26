@@ -14,7 +14,7 @@ const Home = () => {
     <>
       <div className="overflow-hidden">
         <PageTwo />
-        <Carousel />
+        {/* <Carousel /> */}
 
         <Working />
         <StickyBackground />

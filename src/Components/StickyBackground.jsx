@@ -1,12 +1,13 @@
 // src/components/StickyBackground.jsx
 import React, { useState, useEffect } from "react";
 import { GoPlay } from "react-icons/go";
+import lemon from "../../public/lemon.png";
+import guava from "../../public/guava.png";
+import lychee from "../../public/lychee.png";
+import mango from "../../public/mango.png";
+import mix from "../../public/mix.png";
 
-const images = [
-  "https://www.drinkgroovy.com/wp-content/themes/Groovy/images/About/Group%20170.png",
-  "https://www.drinkgroovy.com/wp-content/themes/Groovy/images/About/Group%20171.png",
-  "https://www.drinkgroovy.com/wp-content/themes/Groovy/images/About/Group%20175.png",
-];
+const images = [lemon, guava, lychee, mango, mix];
 
 const StickyBackground = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
