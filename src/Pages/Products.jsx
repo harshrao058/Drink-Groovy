@@ -77,7 +77,7 @@ const Products = () => {
         <div className="flex px-16">
           <div
             className="flex transition-transform duration-500 ease-in-out"
-            style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
+            style={{ transform: `translateX(-${currentIndex * (100 / 2)}%)` }}
           >
             {products.map((product, index) => (
               <div key={index} className=" p-2">
