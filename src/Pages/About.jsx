@@ -1,9 +1,112 @@
-import React from 'react'
-
+import React, { useState, useEffect } from "react";
+import ourstory from "../../public/ourstory.png";
+import pow from "../../public/pow.png";
+import www from "../../public/www.png";
+import www1 from "../../public/www1.png";
+import wearegroovy from "../../public/wearegroovy.jpg";
+import pack from "../../public/pack.jpg";
+import WeAreFeatured from "../../public/WeAreFeatured.png";
+import a from "../../public/a.jpeg";
+import b from "../../public/b.jpeg";
+import c from "../../public/c.jpeg";
+import d from "../../public/d.jpeg";
+import e from "../../public/e.jpeg";
+import f from "../../public/f.jpeg";
+import g from "../../public/g.jpeg";
+import h from "../../public/h.jpeg";
+const images = [pack, www, www1];
+const dist = [a, b, c, e, f, g, , h];
 const About = () => {
-  return (
-    <div>About</div>
-  )
-}
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-export default About
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const prevSlide = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    );
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+  return (
+    <>
+      <div className="pt-20 bg-[#F3F1F8]">
+        <div className="flex w-full px-16 ">
+          <div className="w-1/3 justify-center items-center flex px-4 text-2xl uppercase">
+            <h1>Our Story</h1>
+          </div>
+          <div className="w-1/3 justify-center items-center flex px-4 ">
+            <img src={ourstory} alt="" />
+          </div>
+          <div className="w-1/3 justify-center items-center flex px-4  text-md">
+            <h1>
+              The journey of Groovy starts from a dream of{" "}
+              <span className="bg-zinc-800 text-white px-2 ">2 brothers</span>{" "}
+              to create an honest & impactful brand to reflect their
+              uncompromising approach to creating the purest juices. Groovy is
+              that dream which came true. It unleashes freshness from the very
+              first drop. Enriched with rich vitamins, multi-nutrients, and
+              quality fruit extracts, Groovy is not just a drink-it's a story
+              woven in the form of joyful and bright squeezy packs.
+            </h1>
+          </div>
+        </div>
+        <div className="w-full flex px-16 bg-[#abf063] py-4">
+          <div className="w-1/2 bg-green-40 overflow-hidden">
+            <div
+              className="flex transition-transform duration-500 "
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              {images.map((image, index) => (
+                <div key={index} className="w-full flex-shrink-0">
+                  <img
+                    src={image}
+                    alt={`Slide ${index}`}
+                    className="w-full h-auto"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="w-1/2 flex items-center  flex-col ">
+            <img src={wearegroovy} alt="" className="w-96 " />
+            <img src={pow} alt="" />
+            <a href="https://packagingoftheworld.com/2020/07/groovy.html">
+              <h1 className="bg-zinc-800 p text-white px-4 py-2 rounded">
+                Read More
+              </h1>
+            </a>
+          </div>
+        </div>
+        {/* <div className="">
+          <img src="../../public/bgg2.png" alt="" />
+        </div> */}
+        <div className="flex px-16 flex-col items-center justify">
+          <h2 className="mt-6 text-2xl items-center justify-center font-bold leading-tight w-full text-black sm:text-4xl lg:text-4xl flex flex-col mb-4">
+            <p>Our Distributers </p>
+          </h2>
+          <div className="flex flex-wrap gap-4 rounded">
+            {dist.map((val, key) => {
+              return (
+                <div className="rounded-xl">
+                  <img src={val} alt="" className="w-80 " />
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </>
+  );
+};
+
+export default About;

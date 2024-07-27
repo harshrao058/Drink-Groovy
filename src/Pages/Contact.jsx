@@ -5,8 +5,6 @@ import { IoBan } from "react-icons/io5";
 import { GoMail } from "react-icons/go";
 import { PiPhoneCall } from "react-icons/pi";
 
-
-
 const mapLink = "https://maps.app.goo.gl/KmJVzQw3bakqDppo9";
 const embedLink =
   "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14019.48928263212!2d77.2241349!3d28.5435572!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce30033d95957%3A0x32e431c65720c158!2sEnhaz%20Beverages%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1722020211797!5m2!1sen!2sin";
@@ -30,7 +28,8 @@ const locations = [
   {
     title: "Headquarter",
     timings: "Mon-Sat 9am to 5pm.",
-    address: "Enhaz Beverages Pvt. Ltd. D-09, Second Floor, Panchsheel Enclave, Above HDFC Bank Ltd, Soami Nagar Branch, New Delhi - 110017",
+    address:
+      "Enhaz Beverages Pvt. Ltd. D-09, Second Floor, Panchsheel Enclave, Above HDFC Bank Ltd, Soami Nagar Branch, New Delhi - 110017",
   },
   {
     title: "Manufacturing Unit 1",
@@ -40,8 +39,7 @@ const locations = [
   {
     title: "Manufacturing Unit 2",
     timings: "Mon-Sat 9am to 5pm.",
-    address:
-      "Jammu Katra",
+    address: "Jammu Katra",
   },
 ];
 
@@ -122,27 +120,7 @@ export default function Contact() {
             assumenda quam ratione placeat?
           </p>
         </div>
-        <div className="w-full md:-pt-4">
-          <iframe
-            src={embedLink}
-            width="600"
-            height="450"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            className="w-full rounded-lg"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Google Map Location"
-          ></iframe>
-          <a
-            href={mapLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-600 mt-4 inline-block"
-          >
-            Open in Google Maps
-          </a>
-        </div>
+
         {/* locations */}
         <div className="my-8 flex flex-col gap-y-6 md:flex-row lg:justify-around">
           {locations.map((location) => (
@@ -161,36 +139,130 @@ export default function Contact() {
             </div>
           ))}
         </div>
+            <hr />
+
+        <div className="w-full md:pt-8 flex gap-8">
+          <form action="" className=" space-y-4 w-1/2">
+            <p className=" text-xl font-semibold uppercase  text-gray-800">
+              Our friendly team would love to hear from you
+            </p>
+            <div className="grid w-full gap-y-4 md:gap-x-4  lg:grid-cols-2">
+              <div className="grid w-full  items-center gap-1.5">
+                <label
+                  className="text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                  htmlFor="first_name"
+                >
+                  First Name
+                </label>
+                <input
+                  className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
+                  type="text"
+                  id="first_name"
+                  placeholder="First Name"
+                />
+              </div>
+              <div className="grid w-full  items-center gap-1.5">
+                <label
+                  className="text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                  htmlFor="last_name"
+                >
+                  Last Name
+                </label>
+                <input
+                  className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
+                  type="text"
+                  id="last_name"
+                  placeholder="Last Name"
+                />
+              </div>
+            </div>
+            <div className="grid w-full  items-center gap-1.5">
+              <label
+                className="text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                htmlFor="email"
+              >
+                Email
+              </label>
+              <input
+                className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
+                type="text"
+                id="email"
+                placeholder="Email"
+              />
+            </div>
+            <div className="grid w-full  items-center gap-1.5">
+              <label
+                className="text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                htmlFor="phone_number"
+              >
+                Phone number
+              </label>
+              <input
+                className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
+                type="tel"
+                id="phone_number"
+                placeholder="Phone number"
+              />
+            </div>
+            <div className="grid w-full  items-center gap-1.5">
+              <label
+                className="text-sm font-medium leading-none text-gray-700 peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                htmlFor="message"
+              >
+                Message
+              </label>
+              <textarea
+                className="flex h-10 w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 dark:border-gray-700 dark:text-gray-50 dark:focus:ring-gray-400 dark:focus:ring-offset-gray-900"
+                id="message"
+                placeholder="Leave us a message"
+                cols={3}
+              />
+            </div>
+            <button
+              type="button"
+              className="w-full rounded-md bg-zinc-800 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            >
+              Send Message
+            </button>
+          </form>
+          <iframe
+            src={embedLink}
+            // width="600"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            className="w-1/2 rounded-lg"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Google Map Location"
+          ></iframe>
+        </div>
         <div className="my-12 grid grid-cols-1 gap-y-8 text-center sm:grid-cols-2 sm:gap-12 lg:grid-cols-2 px-8">
-        <div className="border-zinc-200 border-2 py-4 px-4 rounded-xl">
-          <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gray-100">
-            <GoMail  className="h-9 w-9 text-green-500 " />
+          <div className="border-zinc-200 border-2 py-4 px-4 rounded-xl">
+            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gray-100">
+              <GoMail className="h-9 w-9 text-green-500 " />
+            </div>
+            <p className="mt-2 text-sm text-gray-600">
+              Please email contact form and we will be assist you. We wotk with
+              you.
+            </p>
+            <h3 className="mt-2 text-lg font-semibold text-black">
+              abcd@contact.com
+            </h3>
           </div>
-          <p className="mt-2 text-sm text-gray-600">
-          Please email contact form and we will be assist you. We wotk with you.
-          </p>
-          <h3 className="mt-2 text-lg font-semibold text-black">
-            abcd@contact.com
-          </h3>
-          
-        </div>
-        <div className="border-zinc-200 border-2 py-4 px-4 rounded-xl">
-          
-          <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gray-100">
-            <PiPhoneCall className="h-9 w-9 text-blue-500" />
+          <div className="border-zinc-200 border-2 py-4 px-4 rounded-xl">
+            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gray-100">
+              <PiPhoneCall className="h-9 w-9 text-blue-500" />
+            </div>
+            <p className="mt-2 text-sm text-gray-600">
+              Please call us and we will be happy to assist you we work with
+              you.
+            </p>
+            <h3 className="mt-2 text-lg font-semibold text-black">
+              9876543210
+            </h3>
           </div>
-          <p className="mt-2 text-sm text-gray-600">
-          Please call us and we will be happy to assist you we work with you.
-          </p>
-          <h3 className="mt-2 text-lg font-semibold text-black">
-            9876543210
-          </h3>
-          
-          
         </div>
-        
-      </div>
-        
       </div>
     </div>
   );
