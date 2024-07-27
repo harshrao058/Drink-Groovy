@@ -69,7 +69,6 @@ export default function Features() {
             hub. No more fridge full of unloved fruit and veg.
           </p>
         </div>
-       
       </div>
        
     </div>
