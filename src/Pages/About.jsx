@@ -14,7 +14,7 @@ import e from "../../public/e.jpeg";
 import f from "../../public/f.jpeg";
 import g from "../../public/g.jpeg";
 import h from "../../public/h.jpeg";
-import TimelineComponent from '../Components/TimelineComponent'
+import TimelineComponent from "../Components/TimelineComponent";
 const images = [pack, www, www1];
 const dist = [a, b, c, e, f, g, , h];
 const About = () => {
@@ -40,15 +40,13 @@ const About = () => {
   return (
     <>
       <div className="pt-20 bg-[#F3F1F8]">
-        <div className="flex w-full px-16 ">
-          <div className="w-1/3 justify-center items-center flex px-4 text-2xl uppercase">
-            <h1>Our Story</h1>
-          </div>
-          <div className="w-1/3 justify-center items-center flex px-4 ">
+        <h1 className="text-4xl font-semibold text-center w-full">Our Story </h1>
+        <div className="flex w-full px-16 mt-4">
+          <div className="w-1/2 justify-center items-center flex px-4 ">
             <img src={ourstory} alt="" />
           </div>
-          <div className="w-1/3 justify-center items-center flex px-4  text-md">
-            <h1>
+          <div className="w-1/2 justify-cent items-cente flex px-4  text-md">
+            <h1 className="text-xl">
               The journey of Groovy starts from a dream of{" "}
               <span className="bg-zinc-800 text-white px-2 ">2 brothers</span>{" "}
               to create an honest & impactful brand to reflect their

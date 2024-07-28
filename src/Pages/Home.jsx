@@ -9,20 +9,22 @@ import Features from "../Components/Features.jsx";
 import StickyBackground from "../Components/StickyBackground";
 import LeftToRightMarquee from "../Components/LeftToRightMarquee";
 import Products from "../Components/Products";
+import NewMarquee from '../Components/NewMarquee'
 const Home = () => {
   return (
     <>
       <div className="overflow-hidden">
         <PageTwo />
         {/* <Carousel /> */}
-
-        <Working />
+        <NewMarquee />
         <StickyBackground />
 
         <Features />
         {/* <Qualities /> */}
         {/* <Products /> */}
-        <LeftToRightMarquee />
+        {/* <LeftToRightMarquee /> */}
+        <Working />
+
 
 
         <Marquee />
