@@ -65,31 +65,31 @@ const plusProducts = [
   {
     image: p4,
     backgroundColor: "F79745",
-    price: "50.00",
+    price: "0.00",
     desc: "Orange Juice",
   },
   {
     image: p2,
     backgroundColor: "F8C0D6",
-    price: "50.00",
+    price: "0.00",
     desc: "Lychee Juice",
   },
   {
     image: p7,
     backgroundColor: "ED6070",
-    price: "50.00",
+    price: "0.00",
     desc: "Anar Juice",
   },
   {
     image: p6,
     backgroundColor: "0E4E29",
-    price: "50.00",
+    price: "0.00",
     desc: "Jeera",
   },
   {
     image: p3,
     backgroundColor: "A0CF6E",
-    price: "50.00",
+    price: "0.00",
     desc: "Guava Juice",
   },
   
@@ -109,7 +109,7 @@ const Products = () => {
 
   const goToNext1 = () => {
     const isLastSlide = currentIndex1 === Math.ceil(products.length / 3) - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex1 + 1;
+    const newIndex = isLastSlide ? 0 : currentIndex1 + 0.5;
     setCurrentIndex1(newIndex);
   };
 
