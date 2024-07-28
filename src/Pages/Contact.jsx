@@ -4,6 +4,7 @@ import { Menu, X, MapPin } from "lucide-react";
 import { IoBan } from "react-icons/io5";
 import { GoMail } from "react-icons/go";
 import { PiPhoneCall } from "react-icons/pi";
+import bgg2 from '../../public/bgg2.png'
 
 const mapLink = "https://maps.app.goo.gl/KmJVzQw3bakqDppo9";
 const embedLink =
@@ -25,12 +26,12 @@ const menuItems = [
 ];
 
 const locations = [
-  {
-    title: "Headquarter",
-    timings: "Mon-Sat 9am to 5pm.",
-    address:
-      "Enhaz Beverages Pvt. Ltd. D-09, Second Floor, Panchsheel Enclave, Above HDFC Bank Ltd, Soami Nagar Branch, New Delhi - 110017",
-  },
+  // {
+  //   title: "Headquarter",
+  //   timings: "Mon-Sat 9am to 5pm.",
+  //   address:
+  //     "Enhaz Beverages Pvt. Ltd. D-09, Second Floor, Panchsheel Enclave, Above HDFC Bank Ltd, Soami Nagar Branch, New Delhi - 110017",
+  // },
   {
     title: "Manufacturing Unit 1",
     timings: "Mon-Sat 9am to 5pm.",
@@ -122,7 +123,7 @@ export default function Contact() {
         </div>
 
         {/* locations */}
-        <div className="my-8 flex flex-col gap-y-6 md:flex-row lg:justify-around">
+        <div className="mb-8 flex flex-col gap-y-6 md:flex-row lg:justify-around">
           {locations.map((location) => (
             <div
               key={location.title}
@@ -139,9 +140,64 @@ export default function Contact() {
             </div>
           ))}
         </div>
-            <hr />
+        <hr />
 
         <div className="w-full md:pt-8 flex gap-8">
+          <div className="w-1/2 flex flex-col gap-4">
+            <h1 className="text-2xl flex items-center font-semibold">
+              <MapPin className="h-10 w-10" />
+              Headquarter
+            </h1>
+            <p className="text-xl"> Timings: Mon-Sat 9am to 5pm</p>
+            <p className="text-base">
+              Enhaz Beverages Pvt. Ltd. D-09, Second Floor, Panchsheel Enclave,
+              Above HDFC Bank Ltd, Soami Nagar Branch, New Delhi - 110017
+            </p>
+          </div>
+          <iframe
+            src={embedLink}
+            // width="600"
+            // height="450"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            className="w-1/2 rounded-lg"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Google Map Location"
+          ></iframe>
+        </div>
+        <div className="my-12 grid grid-cols-1 gap-y-8 text-center sm:grid-cols-2 sm:gap-12 lg:grid-cols-2 px-8">
+          <div className="border-zinc-200 border-2 py-4 px-4 rounded-xl">
+            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gray-100">
+              <GoMail className="h-9 w-9 text-green-500 " />
+            </div>
+            <p className="mt-2 text-sm text-gray-600">
+              Please email contact form and we will be assist you. We wotk with
+              you.
+            </p>
+            <h3 className="mt-2 text-lg font-semibold text-black">
+              abcd@contact.com
+            </h3>
+          </div>
+          <div className="border-zinc-200 border-2 py-4 px-4 rounded-xl">
+            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gray-100">
+              <PiPhoneCall className="h-9 w-9 text-blue-500" />
+            </div>
+            <p className="mt-2 text-sm text-gray-600">
+              Please call us and we will be happy to assist you we work with
+              you.
+            </p>
+            <h3 className="mt-2 text-lg font-semibold text-black">
+              9876543210
+            </h3>
+          </div>
+        </div>
+        <hr />
+
+        <div className="mb-4 flex gap-8 mt-8">
+          <div className="w-1/2 ">
+            <img src={bgg2} alt="" className='rounded-xl' />
+          </div>
           <form action="" className=" space-y-4 w-1/2">
             <p className=" text-xl font-semibold uppercase  text-gray-800">
               Our friendly team would love to hear from you
@@ -225,43 +281,6 @@ export default function Contact() {
               Send Message
             </button>
           </form>
-          <iframe
-            src={embedLink}
-            // width="600"
-            height="450"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            className="w-1/2 rounded-lg"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Google Map Location"
-          ></iframe>
-        </div>
-        <div className="my-12 grid grid-cols-1 gap-y-8 text-center sm:grid-cols-2 sm:gap-12 lg:grid-cols-2 px-8">
-          <div className="border-zinc-200 border-2 py-4 px-4 rounded-xl">
-            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gray-100">
-              <GoMail className="h-9 w-9 text-green-500 " />
-            </div>
-            <p className="mt-2 text-sm text-gray-600">
-              Please email contact form and we will be assist you. We wotk with
-              you.
-            </p>
-            <h3 className="mt-2 text-lg font-semibold text-black">
-              abcd@contact.com
-            </h3>
-          </div>
-          <div className="border-zinc-200 border-2 py-4 px-4 rounded-xl">
-            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gray-100">
-              <PiPhoneCall className="h-9 w-9 text-blue-500" />
-            </div>
-            <p className="mt-2 text-sm text-gray-600">
-              Please call us and we will be happy to assist you we work with
-              you.
-            </p>
-            <h3 className="mt-2 text-lg font-semibold text-black">
-              9876543210
-            </h3>
-          </div>
         </div>
       </div>
     </div>

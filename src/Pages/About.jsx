@@ -14,6 +14,7 @@ import e from "../../public/e.jpeg";
 import f from "../../public/f.jpeg";
 import g from "../../public/g.jpeg";
 import h from "../../public/h.jpeg";
+import TimelineComponent from '../Components/TimelineComponent'
 const images = [pack, www, www1];
 const dist = [a, b, c, e, f, g, , h];
 const About = () => {
@@ -59,6 +60,8 @@ const About = () => {
             </h1>
           </div>
         </div>
+        <TimelineComponent />
+
         <div className="w-full flex px-16 bg-[#abf063] py-4">
           <div className="w-1/2 bg-green-40 overflow-hidden">
             <div

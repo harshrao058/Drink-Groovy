@@ -25,6 +25,14 @@
     display: none;
   }
 }
+.custom-date {
+
+  font-size: 80px; /* Adjust as needed */
+  font-weight: bold; /* Optional: makes the date bold */
+  color: #000000; /* Set the color */
+  padding: 5px 10px; /* Add padding for better visual appearance */
+  border-radius: 5px; /* Optional: adds rounded corners */
+}
 
 
 .logo {
