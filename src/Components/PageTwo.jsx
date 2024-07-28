@@ -11,10 +11,12 @@ import SliderFive from "./SliderFive";
 
 // const sliders = [<Slider />, <SliderTwo />, <SliderThree />, <SliderFour />, <SliderFive />];
 const sliders = [
-  <Slider />,
   <SliderTwo />,
-  <SliderThree />,
+
   <SliderFour />,
+
+  <Slider />,
+  <SliderThree />,
   <SliderFive />,
 ];
 // const sliders = [<Slider />];
