@@ -21,7 +21,7 @@ const StickyBackground = () => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden px-16 ">
+    <div className="relative overflow-hidden  ">
       <div
         className="relative h-screen bg-fixed bg-cover bg-center"
         style={{
