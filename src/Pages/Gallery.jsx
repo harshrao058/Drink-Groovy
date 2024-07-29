@@ -8,7 +8,7 @@ import f from "../../public/f.jpeg";
 import g from "../../public/g.jpeg";
 import h from "../../public/h.jpeg";
 
-const Blogs = () => {
+const Gallery = () => {
   const dist = [a, b, c, e, f, g,  h];
 
   return (
@@ -31,4 +31,4 @@ const Blogs = () => {
   )
 }
 
-export default Blogs
+export default Gallery

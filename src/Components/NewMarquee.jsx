@@ -103,7 +103,7 @@ const NewMarquee = () => {
   ];
 
   return (
-    <div className="overflow-hidden whitespace-nowrap bg-red-500 flex font-semibold uppercase ">
+    <div className="overflow-hidden whitespace-nowrap  flex font-semibold uppercase ">
       <div className="flex animate-marquee">
         
         {items.map((item, index) => (
@@ -112,7 +112,7 @@ const NewMarquee = () => {
             className="flex-shrink-0 m-2 flex font-semibold items-center"
           >
             {typeof item === 'string' && !item.endsWith(".png") ? (
-              <span className="text-lg font-semibold text-white">{item}</span>
+              <span className="text-3xl tracking-tight font-semibold text-whit">{item}</span>
             ) : (
               <img src={item} alt={`marquee-item-${index}`} className="h-16 -auto" />
             )}
