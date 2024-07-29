@@ -40,17 +40,24 @@ const About = () => {
   return (
     <>
       <div className="pt-20 bg-[#F3F1F8]">
-        <h1 className="text-4xl font-semibold text-center w-full">Our Story </h1>
         <div className="flex w-full px-16 mt-4">
           <div className="w-1/2 justify-center items-center flex px-4 ">
             <img src={ourstory} alt="" />
           </div>
-          <div className="w-1/2 justify-cent items-cente flex px-4  text-md">
+          <div className="w-1/2 justify-cent items-cente flex flex-col gap-3 px-4  text-md">
+            <h1 className="text-4xl font-semibold text-center w-full">
+              Our Story{" "}
+            </h1>
+
             <h1 className="text-xl">
               The journey of Groovy starts from a dream of{" "}
               <span className="bg-zinc-800 text-white px-2 ">2 brothers</span>{" "}
               to create an honest & impactful brand to reflect their
-              uncompromising approach to creating the purest juices.The brand unleashes freshness from the very first drop, delivering an intense hit of purity that makes you go Groovy. Located in the Greater Delhi Area, Groovy is dedicated to providing high-quality, natural juices.
+              uncompromising approach to creating the purest juices.The brand
+              unleashes freshness from the very first drop, delivering an
+              intense hit of purity that makes you go Groovy. Located in the
+              Greater Delhi Area, Groovy is dedicated to providing
+              high-quality, natural juices.
             </h1>
           </div>
         </div>
@@ -86,7 +93,7 @@ const About = () => {
         {/* <div className="">
           <img src="../../public/bgg2.png" alt="" />
         </div> */}
-        
+
         <div></div>
       </div>
     </>
