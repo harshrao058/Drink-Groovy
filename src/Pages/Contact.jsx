@@ -4,7 +4,8 @@ import { Menu, X, MapPin } from "lucide-react";
 import { IoBan } from "react-icons/io5";
 import { GoMail } from "react-icons/go";
 import { PiPhoneCall } from "react-icons/pi";
-import bgg2 from '../../public/bgg2.png'
+import bgg2 from "../../public/bgg2.png";
+// import bgg2 from "../../public/bgg2.png";
 
 const mapLink = "https://maps.app.goo.gl/KmJVzQw3bakqDppo9";
 const embedLink =
@@ -104,69 +105,76 @@ export default function Contact() {
 
   return (
     <div>
-      <div className="mx-auto  px-16 ">
+      <div className="mx-auto  ">
         {/* Hero Map */}
-        <div className="flex flex-col space-y- pb-10 pt-12 md:pt-32">
-          <div className="max-w-max rounded-full border bg-gray-50 p-1 px-3">
-            <p className="text-xs font-semibold leading-normal md:text-sm">
-              Contact the company
-            </p>
-          </div>
-          <p className="text-sm font-bold text-gray-900 md:text-4xl md:py-4 ">
-            Made with love, right here in India
-          </p>
-          <p className="max-w-4xl text-base text-gray-600 md:text-base">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
-            veritatis voluptates neque itaque repudiandae sint, explicabo
-            assumenda quam ratione placeat?
-          </p>
-        </div>
-
-        {/* locations */}
-        <div className="mb-8 flex flex-col gap-y-6 md:flex-row lg:justify-around">
-          {locations.map((location) => (
-            <div
-              key={location.title}
-              className="flex flex-col space-y-3 md:w-2/4 lg:w-1/5"
-            >
-              <MapPin className="h-5 w-5" />
-              <p className="w-full text-xl font-semibold  text-gray-900">
-                {location.title}
+        <div
+        className="px-16 bg-fixed bg-cover bg-center "
+          style={{
+            backgroundImage: `url(${bgg2})`,
+          }}
+        >
+          <div className="flex flex-col space-y- pb-10 pt-12 md:pt-32">
+            <div className="max-w-max rounded-full border bg-gray-50 p-1 px-3">
+              <p className="text-xs font-semibold leading-normal md:text-sm">
+                Contact the company
               </p>
-              <p className="w-full text-base text-gray-700">
-                {location.timings}
-              </p>
-              <p className="text-sm font-medium">{location.address}</p>
             </div>
-          ))}
-        </div>
-        <hr />
-
-        <div className="w-full md:pt-8 flex gap-8">
-          <div className="w-1/2 flex flex-col gap-4">
-            <h1 className="text-2xl flex items-center font-semibold">
-              <MapPin className="h-10 w-10" />
-              Headquarter
-            </h1>
-            <p className="text-xl"> Timings: Mon-Sat 9am to 5pm</p>
-            <p className="text-base">
-              Enhaz Beverages Pvt. Ltd. D-09, Second Floor, Panchsheel Enclave,
-              Above HDFC Bank Ltd, Soami Nagar Branch, New Delhi - 110017
+            <p className="text-sm font-bold text-gray-900 md:text-4xl md:py-4 backdrop-blur-sm">
+              Get in touch
+            </p>
+            <p className="max-w-4xl text-base text-gray-600 md:text-base backdrop-blur-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+              veritatis voluptates neque itaque repudiandae sint, explicabo
+              assumenda quam ratione placeat?
             </p>
           </div>
-          <iframe
-            src={embedLink}
-            // width="600"
-            // height="450"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="lazy"
-            className="w-1/2 rounded-lg"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Google Map Location"
-          ></iframe>
+
+          {/* locations */}
+          <div className="mb-8 flex flex-col gap-y-6 md:flex-row lg:justify-around ">
+            {locations.map((location) => (
+              <div
+                key={location.title}
+                className="flex backdrop-blur-sm px-2 flex-col space-y-3 md:w-2/4 lg:w-1/5"
+              >
+                <MapPin className="h-5 w-5" />
+                <p className="w-full text-xl font-semibold  text-gray-900">
+                  {location.title}
+                </p>
+                <p className="w-full text-base text-gray-700">
+                  {location.timings}
+                </p>
+                <p className="text-sm font-medium">{location.address}</p>
+              </div>
+            ))}
+          </div>
+          <hr />
         </div>
-        <div className="my-12 grid grid-cols-1 gap-y-8 text-center sm:grid-cols-2 sm:gap-12 lg:grid-cols-2 px-8">
+        <div className="w-full md:pt-8 flex gap-8 px-16">
+            <div className="w-1/2 flex flex-col gap-4">
+              <h1 className="text-2xl flex items-center font-semibold">
+                <MapPin className="h-10 w-10" />
+                Headquarter
+              </h1>
+              <p className="text-xl"> Timings: Mon-Sat 9am to 5pm</p>
+              <p className="text-base">
+                Enhaz Beverages Pvt. Ltd. D-09, Second Floor, Panchsheel
+                Enclave, Above HDFC Bank Ltd, Soami Nagar Branch, New Delhi -
+                110017
+              </p>
+            </div>
+            <iframe
+              src={embedLink}
+              // width="600"
+              // height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              className="w-1/2 rounded-lg"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Google Map Location"
+            ></iframe>
+          </div>
+        <div className="my-12  grid grid-cols-1 gap-y-8 text-center sm:grid-cols-2 sm:gap-12 lg:grid-cols-2 px-16">
           <div className="border-zinc-200 border-2 py-4 px-4 rounded-xl">
             <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-gray-100">
               <GoMail className="h-9 w-9 text-green-500 " />
@@ -194,9 +202,9 @@ export default function Contact() {
         </div>
         <hr />
 
-        <div className="mb-4 flex gap-8 mt-8">
+        <div className="mb-4 flex gap-8 mt-8 px-16">
           <div className="w-1/2 ">
-            <img src={bgg2} alt="" className='rounded-xl' />
+            <img src={bgg2} alt="" className="rounded-xl" />
           </div>
           <form action="" className=" space-y-4 w-1/2">
             <p className=" text-xl font-semibold uppercase  text-gray-800">
