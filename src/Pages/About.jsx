@@ -50,11 +50,7 @@ const About = () => {
               The journey of Groovy starts from a dream of{" "}
               <span className="bg-zinc-800 text-white px-2 ">2 brothers</span>{" "}
               to create an honest & impactful brand to reflect their
-              uncompromising approach to creating the purest juices. Groovy is
-              that dream which came true. It unleashes freshness from the very
-              first drop. Enriched with rich vitamins, multi-nutrients, and
-              quality fruit extracts, Groovy is not just a drink-it's a story
-              woven in the form of joyful and bright squeezy packs.
+              uncompromising approach to creating the purest juices.The brand unleashes freshness from the very first drop, delivering an intense hit of purity that makes you go Groovy. Located in the Greater Delhi Area, Groovy is dedicated to providing high-quality, natural juices.
             </h1>
           </div>
         </div>

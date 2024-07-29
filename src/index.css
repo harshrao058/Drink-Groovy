@@ -17,6 +17,10 @@
   }
 }
 
+img { 
+  filter: drop-shadow(1.2px 1.2px 1.2px #646464); 
+}
+
 .animate-marquee {
   animation: marquee 300s linear infinite;
 }

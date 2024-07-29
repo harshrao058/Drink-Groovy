@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { FiSearch } from 'react-icons/fi';
-import { LuShoppingCart } from 'react-icons/lu';
-import { GrFavorite } from 'react-icons/gr';
-import { FaRegUser } from 'react-icons/fa6';
-import { NavLink } from 'react-router-dom';
-
-import logo from '../../public/logo.png';
+import React, { useState, useEffect } from "react";
+import { FiSearch } from "react-icons/fi";
+import { LuShoppingCart } from "react-icons/lu";
+import { GrFavorite } from "react-icons/gr";
+import { FaRegUser } from "react-icons/fa6";
+import { NavLink } from "react-router-dom";
+import '../index.css'
+import logo from "../../public/logo.png";
 
 const Nav = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,45 +19,81 @@ const Nav = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <div className={`w-full z-50 fixed flex items-center justify-between lg:px-16 px-8 lg:py-8 py-4 h-24 text-black nav-transition ${isScrolled ? 'bg-zinc-800 text-white transition-all ease-in-out'  : ''}`}>
+    <div
+      className={`w-full z-50 fixed flex items-center justify-between lg:px-16 px-8 lg:py-8 py-4 h-24 text-black nav-transition ${
+        isScrolled ? "bg-zinc-800 text-white transition-all ease-in-out" : ""
+      }`}
+    >
       <div className="flex items-center gap-16">
-        <img src={logo} alt="Logo" className="w-[8vw]" />
+        <NavLink to="/">
+          <img src={logo} alt="Logo" className="w-[8vw] shadow-2x img" />
+        </NavLink>
         <div className="flex items-center gap-[4vw] uppercase">
           <NavLink
             to="/"
-            className="cursor-pointer font-semibold text-sm text-white bg-zinc-800 px-2 py-1 hover:text-gray-400"
+            className={({ isActive }) =>
+              `cursor-pointer font-semibold text-sm ${
+                isActive
+                  ? "bg-zinc-800 transition-all ease-in-out text-white px-2 py-1"
+                  : "hover:text-gray-400"
+              }`
+            }
           >
             Home
           </NavLink>
           <NavLink
             to="/products"
-            className="cursor-pointer font-semibold text-sm hover:text-gray-400"
+            className={({ isActive }) =>
+              `cursor-pointer font-semibold text-sm ${
+                isActive
+                  ? "bg-zinc-800 transition-all ease-in-out text-white px-2 py-1"
+                  : "hover:text-gray-400"
+              }`
+            }
           >
             Products
           </NavLink>
           <NavLink
             to="/gallery"
-            className="cursor-pointer font-semibold text-sm hover:text-gray-400"
+            className={({ isActive }) =>
+              `cursor-pointer font-semibold text-sm ${
+                isActive
+                  ? "bg-zinc-800 transition-all ease-in-out text-white px-2 py-1"
+                  : "hover:text-gray-400"
+              }`
+            }
           >
             Gallery
           </NavLink>
           <NavLink
             to="/about"
-            className="cursor-pointer font-semibold text-sm hover:text-gray-400"
+            className={({ isActive }) =>
+              `cursor-pointer font-semibold text-sm ${
+                isActive
+                  ? "bg-zinc-800 transition-all ease-in-out text-white px-2 py-1"
+                  : "hover:text-gray-400"
+              }`
+            }
           >
             About Us
           </NavLink>
           <NavLink
             to="/contact"
-            className="cursor-pointer font-semibold text-sm hover:text-gray-400"
+            className={({ isActive }) =>
+              `cursor-pointer font-semibold text-sm ${
+                isActive
+                  ? "bg-zinc-800 transition-all ease-in-out text-white px-2 py-1"
+                  : "hover:text-gray-400"
+              }`
+            }
           >
             Contact Us
           </NavLink>
